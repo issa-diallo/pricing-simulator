@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# 🧮 Pricing Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application React + TypeScript qui permet de simuler et calculer le prix optimal d’un service en fonction du temps gagné, du taux horaire et de la valeur capturée.
 
-Currently, two official plugins are available:
+## ✨ Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Sélection du pays (France ou Suisse)
+- Choix entre taux horaire ou salaire brut annuel
+- Simulation du coût manuel par document
+- Calcul automatique du gain et du prix conseillé
+- Visualisation graphique du gain potentiel
+- Export des résultats au format CSV
+- ESLint + Prettier configurés pour un code propre
 
-## Expanding the ESLint configuration
+## 🚀 Stack technique
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Recharts](https://recharts.org/)
+- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Scripts disponibles
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+```bash
+npm run dev        # Lance le serveur local
+npm run build      # Build de l'application pour la production
+npm run preview    # Aperçu du build
+npm run lint       # Lint + auto-correction ESLint
+npm run format     # Formatage avec Prettier
