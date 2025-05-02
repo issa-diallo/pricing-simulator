@@ -1,0 +1,10 @@
+export const SETTINGS = {
+  CAPTURE_RATE: 15,
+  DEFAULT_SALARY: 65000,
+  DEFAULT_VOLUME: 500,
+  DEFAULT_DURATION: 45,
+  HOURS: {
+    ch: 1995,
+    fr: 1662,
+  },
+}
