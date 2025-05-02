@@ -1,17 +1,31 @@
-import { useState } from 'react'
-import { CountryType } from '../types'
-import { getEffectiveRate } from '../utils/calculations'
 import InputsForm from './InputsForm'
 import PricingResults from './PricingResults'
 import CalculationExplanation from './CalculationExplanation'
+import { getEffectiveRate } from '../utils/calculations'
 import { SETTINGS } from '../utils/constants'
+import { CountryType } from '../types'
 
-export default function PricingSimulator() {
-  const [country, setCountry] = useState<CountryType>('ch')
-  const [annualSalary, setAnnualSalary] = useState(SETTINGS.DEFAULT_SALARY)
-  const [duration, setDuration] = useState(SETTINGS.DEFAULT_DURATION)
-  const [annualVolume, setAnnualVolume] = useState(SETTINGS.DEFAULT_VOLUME)
+interface Props {
+  country: CountryType
+  setCountry: (value: CountryType) => void
+  annualSalary: number
+  setAnnualSalary: (value: number) => void
+  duration: number
+  setDuration: (value: number) => void
+  annualVolume: number
+  setAnnualVolume: (value: number) => void
+}
 
+export default function PricingSimulator({
+  country,
+  setCountry,
+  annualSalary,
+  setAnnualSalary,
+  duration,
+  setDuration,
+  annualVolume,
+  setAnnualVolume,
+}: Props) {
   const currency = country === 'ch' ? 'CHF' : 'EUR'
   const annualHours = SETTINGS.HOURS[country]
   const effectiveRate = getEffectiveRate(annualSalary, annualHours)
