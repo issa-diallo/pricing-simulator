@@ -1,31 +1,44 @@
 # 🧮 Pricing Simulator
 
-Une application React + TypeScript qui permet de simuler et calculer le prix optimal d’un service en fonction du temps gagné, du taux horaire et de la valeur capturée.
+[👉 Try it live on Vercel](https://pricing-simulator-three.vercel.app/)
 
-## ✨ Fonctionnalités
+A React + TypeScript application to help simulate and calculate the **optimal price** of a service based on **time saved**, **salary**, and **annual volume**.  
+The tool provides an intuitive UI and graphical comparison between manual and automated processes.
 
-- Sélection du pays (France ou Suisse)
-- Choix entre taux horaire ou salaire brut annuel
-- Simulation du coût manuel par document
-- Calcul automatique du gain et du prix conseillé
-- Visualisation graphique du gain potentiel
-- Export des résultats au format CSV
-- ESLint + Prettier configurés pour un code propre
+---
 
-## 🚀 Stack technique
+## ✨ Features
+
+- 🌍 Country selection: France 🇫🇷 or Switzerland 🇨🇭
+- 💼 Input gross annual salary
+- ⏱️ Define manual processing time (e.g. packing list handling)
+- ⚙️ Calculate:
+  - Manual processing cost
+  - Suggested app price based on time saved
+  - Estimated annual revenue
+- 📈 Interactive pie chart showing value breakdown
+- 🧠 Built-in calculation explanation
+- 🧹 ESLint & Prettier configured for clean code
+
+---
+
+## 🚀 Tech Stack
 
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Recharts](https://recharts.org/)
-- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+- [Vercel](https://vercel.com/) for deployment
 
-## 🛠️ Scripts disponibles
+---
+
+## 🛠️ Available Scripts
 
 ```bash
-npm run dev        # Lance le serveur local
-npm run build      # Build de l'application pour la production
-npm run preview    # Aperçu du build
-npm run lint       # Lint + auto-correction ESLint
-npm run format     # Formatage avec Prettier
+npm run dev        # Start local development server
+npm run build      # Build the app for production
+npm run preview    # Preview the production build locally
+npm run lint       # Run ESLint and auto-fix issues
+npm run format     # Format files using Prettier
